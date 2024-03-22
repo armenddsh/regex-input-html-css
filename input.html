@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div id="input" spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" contenteditable="true"
+        style="tab-size: 4;" class="cm-content cm-lineWrapping" role="textbox" aria-multiline="true"
+        aria-label="insert your regular expression here">
+        <div id="regex">
+            <span class="regex-placeholder" aria-label="placeholder insert your regular expression here"
+                contenteditable="false" style="pointer-events: none;">Insert your regular expression here</span>
+            <br>
+        </div>
+    </div>
+
+    <script>
+
+        const input = document.getElementById("input");
+        const regex = document.getElementById("regex");
+
+        input.addEventListener("keydown", function (event) {
+            console.log(event)
+
+            const el = document.createElement("span")
+            el.innerText = event.key;
+
+            regex.append(el);
+
+        });
+
+    </script>
+</body>
+
+</html>
